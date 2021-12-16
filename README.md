@@ -36,7 +36,7 @@ message = "Write some message!"
 
 - Having Python installed on your machine, run ```pip install selenium``` on terminal.
 
-- Now run ```python main.py``` on terminal.
+- Now run ```python bot.py``` on terminal.
 
 ### What may go wrong
 

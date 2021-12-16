@@ -74,7 +74,7 @@ for i in range(start_page_index, last_page_index):
         paragaraphs[-5].send_keys(formatted_text_buffer)
         submit = browser.find_element_by_xpath("//button[@type='submit']")
         time.sleep(2)
-        # browser.execute_script("arguments[0].click();", submit)
+        browser.execute_script("arguments[0].click();", submit)
         time.sleep(2)
 
         close_button = browser.find_element_by_xpath(

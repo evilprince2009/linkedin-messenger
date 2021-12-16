@@ -15,13 +15,13 @@ Follow these steps below to run this
 
 - Put it into the root directory.
 
-- Open ```bot.py``` file in your favorite code editor.
+- Open ```main.py``` file in your favorite code editor.
 
-- Go to _line 11_, change it to:
+- Go to _line 16_, change it to:
   - ```browser = webdriver.Edge("msedgedriver.exe")``` if you want use Microsoft Edge.
   - ```browser = webdriver.Chrome("chromedriver.exe")``` if you want use Google Chrome.
 
-- Fill these fields with proper credentials and parameters inside ```bot.py``` file.
+- Fill these fields with proper credentials and parameters inside ```main.py``` file.
 
 ```
 # Tell the bot from which page to start and where to end

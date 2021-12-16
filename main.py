@@ -1,11 +1,10 @@
 import random
 import time
-
 from selenium import webdriver
 
 # Tell the bot from which page to start and where to end
-start_page_index = 50
-last_page_index = 60
+start_page_index = 1  # Can't be less than 1
+last_page_index = 100  # Can't be less than 1 , upper value depends on your connection
 
 # Credentials and Message
 username = ""

@@ -1,5 +1,5 @@
 # LinkedIn Messenger
-A simple LinkedIn Bot that sends connection requests to people appear on specific search result.
+A simple bot to automate LinkedIn messages
 
 ## Made using
 - Python

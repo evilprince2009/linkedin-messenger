@@ -1,5 +1,6 @@
 import random
 import time
+
 from selenium import webdriver
 
 # Tell the bot from which page to start and where to end
@@ -30,8 +31,8 @@ browser.execute_script("arguments[0].click();", submit)
 time.sleep(1)
 
 for i in range(start_page_index, last_page_index):
-    network_url = url + "/search/results/people/?network=%5B%22F%22%5D&origin=FACETED_SEARCH&page=" + \
-        str(i) + "&sid=OEz"
+
+    network_url = f"{url}/search/results/people/?network=%5B%22F%22%5D&origin=FACETED_SEARCH&page={str(i)}&sid=OEz"
 
     browser.get(network_url)
     time.sleep(2)
@@ -66,15 +67,14 @@ for i in range(start_page_index, last_page_index):
             recipent_names.append(name)
 
         greetings_idx = random.randint(0, len(greetings_prefix) - 1)
-        formatted_text_buffer = greetings_prefix[greetings_idx] + \
-            " " + recipent_names[name_tracker] + "\n" + message
+        formatted_text_buffer = f"{greetings_prefix[greetings_idx]} {recipent_names[name_tracker]},\n{message}"
         name_tracker += 1
         time.sleep(2)
 
         paragaraphs[-5].send_keys(formatted_text_buffer)
         submit = browser.find_element_by_xpath("//button[@type='submit']")
         time.sleep(2)
-        browser.execute_script("arguments[0].click();", submit)
+        # browser.execute_script("arguments[0].click();", submit)
         time.sleep(2)
 
         close_button = browser.find_element_by_xpath(
